@@ -4,11 +4,12 @@ const ArtikelsTonen = {
 Articles() {
 
     console.log('init')
-    const filteren = document.getElementById('filterInputField').nodeValue;
+    const filteren = document.getElementById('filterInputField').value;
     console.log(filteren);
     this.opstart(filteren);
 
 }
+
 
 }
 class artikels {
@@ -19,6 +20,12 @@ class artikels {
       this.imageURL = imageURL
       this.likes = likes
       this.datum = datum
+
+      likes.sort(function (a, b) {
+
+    return a.value - b.value;
+        
+        })
 
     }
   }
@@ -35,10 +42,6 @@ class artikels {
     }
 
 
-
-
-
-  
   Weergeven();
 
 
